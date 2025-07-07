@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal } from '@angular/core';
 import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, NavbarComponent],
+  imports: [HomeComponent, HeaderComponent],
   template: `
-    <app-navbar />
+    <app-header [coverPhoto]="headerImage()" />
     <app-home />
   `,
   styles: [],
 })
-export class AppComponent {}
+export class AppComponent {
+  headerImage = signal(
+    'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png'
+  );
+}
