@@ -1,6 +1,7 @@
 :root {
   --background-color: #1c2833;
-  --text-color: #f4f6f6;
+  --text-color-primary: #f4f6f6;
+  --text-color-secondary: #b2babb;
 }
 
 * {
@@ -9,7 +10,17 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-Body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+body {
+  background: linear-gradient(
+    90deg,
+    var(--background-color) 0%,
+    #1f2855 50%,
+    var(--background-color) 100%
+  );
+  color: var(--text-color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-primary);
 }

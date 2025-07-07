@@ -1,0 +1,28 @@
+<div class="timeline">
+  <button class="timeline__scrollbutton left" (click)="scrollLeft()"></button>
+  <button class="timeline__scrollbutton right" (click)="scrollRight()"></button>
+  <h1 class="timeline__title">
+    <a [href]="headerUrl()">
+      {{ title() }}
+      @if (headerUrl()) { >
+      <p>Show all</p>
+      }
+    </a>
+  </h1>
+  <div class="timeline__gradient"></div>
+  <div
+    ngModel
+    class="timeline__items"
+    [scrollLeft]="scroll()"
+    #timeline__container
+  >
+    @for (item of items(); track $index) {
+    <a
+      class="timeline__items__item"
+      style="background-image: url({{item.photo}});"
+    >
+      <p>- {{ item.heading }}</p>
+    </a>
+    }
+  </div>
+</div>
