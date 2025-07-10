@@ -1,4 +1,18 @@
 <section>
-  <app-timeline />
-  <app-timeline />
+  @for (timeline of timelines(); track $index) { @if (!timeline.manual.banner &&
+  timeline.data.length != 0) {
+  <app-timeline
+    [items]="timeline.data"
+    [title]="timeline.header"
+    [headerUrl]="timeline.headerUrl"
+  />
+  } @if (timeline.manual.banner && timeline.data.length != 0) {
+  <app-banner
+    [photoUrl]="
+      timeline.data[0].photos ? timeline.data[0].photos[0].photoUrlBase : ''
+    "
+    [title]="timeline.data[0].heading"
+    [description]="timeline.data[0].lead"
+  />
+  } }
 </section>

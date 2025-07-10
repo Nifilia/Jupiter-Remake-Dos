@@ -6,6 +6,7 @@ import {
   signal,
   ViewChild,
 } from '@angular/core';
+import { TimelineItem } from '../../model/content.type';
 
 @Component({
   selector: 'app-timeline',
@@ -21,93 +22,7 @@ export class TimelineComponent {
   scrollLimits = signal([0, 0]);
   title = input('Placeholder');
   headerUrl = input('test');
-  items = input([
-    {
-      heading: 'Aktuaalne Kaamera',
-      type: 'series',
-      photo: 'https://s.err.ee/photo/orig/2023/01/03/1731277h1d4c.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-    {
-      heading: 'Armastuse olemus',
-      type: 'movie',
-      photo: 'https://s.err.ee/photo/orig/2025/06/16/2901228h76e8.jpg',
-    },
-  ]);
+  items = input<Array<TimelineItem>>([]);
 
   constructor() {
     setTimeout(() => {
