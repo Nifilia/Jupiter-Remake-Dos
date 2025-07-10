@@ -36,10 +36,22 @@ export type TimelineContent = {
 export type TimelineItem = {
   id: string;
   heading: string;
+  lead?: string;
   primaryCategoryId: number;
   type: string;
   canonicalUrl: string;
   fancyUrl: string;
   anotherDomainContent: boolean;
-  verticalPhoto: string;
+  photos?: Array<PhotoItem>;
+  verticalPhotos: Array<PhotoItem>;
+  squarePhotos: Array<PhotoItem>;
+};
+
+export type PhotoItem = {
+  id: string;
+  created: string;
+  captionEt: string;
+  format: string;
+  photoUrlOriginal: string;
+  photoUrlBase: string;
 };
