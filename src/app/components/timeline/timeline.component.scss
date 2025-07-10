@@ -59,8 +59,7 @@
 
   &__items {
     margin: 1em 0;
-
-    height: 320px;
+    height: 330px;
 
     display: flex;
     gap: 1em;
@@ -81,6 +80,7 @@
       height: 300px;
       min-width: 200px;
 
+      margin-top: 0.25em;
       border-radius: 4px;
       box-shadow: 0 0 4px black;
 
@@ -88,7 +88,7 @@
 
       &:hover {
         border: 1px solid white;
-        box-shadow: 0 0 4px gray;
+        box-shadow: 0 0 8px gainsboro;
       }
 
       p {

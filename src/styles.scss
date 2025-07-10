@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --background-color: #1c2833;
+  --backgrond-color-lighter: #212f3c;
   --text-color-primary: #f4f6f6;
   --text-color-secondary: #b2babb;
 }
@@ -7,7 +10,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
