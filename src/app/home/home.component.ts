@@ -2,10 +2,9 @@ import {
   Component,
   HostListener,
   inject,
-  input,
   NO_ERRORS_SCHEMA,
   signal,
-  SimpleChanges,
+  OnInit,
 } from '@angular/core';
 import { TimelineComponent } from '../components/timeline/timeline.component';
 import { TimelineContent } from '../model/content.type';
@@ -23,10 +22,10 @@ import { catchError } from 'rxjs';
   schemas: [NO_ERRORS_SCHEMA],
   providers: [ContentService],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   contentService = inject(ContentService);
-  timelines = signal<Array<TimelineContent>>([]);
-  shownTimelines = signal<Array<TimelineContent>>([]);
+  timelines = signal<TimelineContent[]>([]);
+  shownTimelines = signal<TimelineContent[]>([]);
   loading = signal<boolean>(true);
 
   ngOnInit(): void {
@@ -56,10 +55,7 @@ export class HomeComponent {
 
       // Reached bottom (with 50px buffer)
       if (this.timelines()) {
-        let newTimelines: Array<TimelineContent> = this.timelines()!.splice(
-          0,
-          3
-        );
+        const newTimelines: TimelineContent[] = this.timelines()!.splice(0, 3);
         this.shownTimelines.set(this.shownTimelines().concat(newTimelines));
       }
     }

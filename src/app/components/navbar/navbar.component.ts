@@ -22,43 +22,44 @@ import { Component } from '@angular/core';
   `,
   styles: `
     .navbar {
-        color: white;
+      color: white;
 
-        width: 100%;
-        height: 64px;
+      width: 100%;
+      height: 64px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-group {
+
+        padding: 0 2em;
         display: flex;
+        gap: 4vh;
 
         align-items: center;
-        justify-content: space-between;
 
-        &-group {
-            padding: 0 2em;
-            display: flex;
-            gap: 4vh;
+        font-size: 1.1em;
+        font-weight: bold;
 
-            align-items: center;
+        a {
+          padding: 8px;
 
-            font-size: 1.1em;
-            font-weight: bold;
-
-            a {
-                padding: 8px;
-
-                &:hover {
-                    cursor: pointer;
-                    border-radius: 2px;
-                    border-bottom: 2px solid white;
-                }
-            }
-
-            .subscribe {
-                background-color: #e74c3c
-                padding: 8px 20px;
-                border-radius: 16px;
-            }
+          &:hover {
+            cursor: pointer;
+            border-radius: 2px;
+            border-bottom: 2px solid white;
+          }
         }
+
+        .subscribe {
+          background-color: #e74c3c;
+          padding: 8px 20px;
+          border-radius: 16px;
+        }
+      }
     }
-    `,
+  `,
 })
 export class NavbarComponent {
   title = 'JUPITER';

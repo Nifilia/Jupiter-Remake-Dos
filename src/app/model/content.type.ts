@@ -1,27 +1,27 @@
-export type ApiResponse = {
+export interface ApiResponse {
   data: {
     category: Content;
   };
-};
+}
 
-export type Content = {
+export interface Content {
   id: number;
   name: string;
   domain: string;
   gemiusId: string;
   siteContent: string;
-  frontPage: Array<TimelineContent>;
-  photos: Array<{
+  frontPage: TimelineContent[];
+  photos: {
     id: string;
     created: string;
     format: string;
 
     photoUrlOriginal: string;
     photoUrlBase: string;
-  }>;
-};
+  }[];
+}
 
-export type TimelineContent = {
+export interface TimelineContent {
   header: string;
   headerUrl: string;
   highTimeline: boolean;
@@ -30,10 +30,10 @@ export type TimelineContent = {
     highTimeline: boolean;
     banner: boolean;
   };
-  data: Array<TimelineItem>;
-};
+  data: TimelineItem[];
+}
 
-export type TimelineItem = {
+export interface TimelineItem {
   id: string;
   heading: string;
   lead?: string;
@@ -42,16 +42,16 @@ export type TimelineItem = {
   canonicalUrl: string;
   fancyUrl: string;
   anotherDomainContent: boolean;
-  photos?: Array<PhotoItem>;
-  verticalPhotos: Array<PhotoItem>;
-  squarePhotos: Array<PhotoItem>;
-};
+  photos?: PhotoItem[];
+  verticalPhotos: PhotoItem[];
+  squarePhotos: PhotoItem[];
+}
 
-export type PhotoItem = {
+export interface PhotoItem {
   id: string;
   created: string;
   captionEt: string;
   format: string;
   photoUrlOriginal: string;
   photoUrlBase: string;
-};
+}

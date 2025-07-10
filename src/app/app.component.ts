@@ -1,8 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
-import { ContentService } from './services/content.service';
-import { catchError } from 'rxjs';
-import { Content, TimelineContent } from './model/content.type';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({

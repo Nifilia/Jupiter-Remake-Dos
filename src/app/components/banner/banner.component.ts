@@ -9,6 +9,7 @@ import { Component, input } from '@angular/core';
 })
 export class BannerComponent {
   photoUrl = input<string>();
+  photoAlt = input<string>();
   title = input<string>();
   description = input<string>();
 }

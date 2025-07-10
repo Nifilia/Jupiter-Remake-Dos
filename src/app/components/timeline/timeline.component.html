@@ -16,8 +16,8 @@
     [scrollLeft]="scroll()"
     #timeline__container
   >
-    @for (item of items(); track $index) { @if (item.verticalPhotos.length != 0)
-    {
+    @for (item of items(); track $index) { @if (item.verticalPhotos.length !==
+    0) {
     <a
       class="timeline__items__item"
       style="background-image: url({{item.verticalPhotos[0].photoUrlBase}});"

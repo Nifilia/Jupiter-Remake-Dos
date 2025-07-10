@@ -1,16 +1,17 @@
 <section>
   @if (!loading()) { @for (timeline of shownTimelines(); track $index) { @if
-  (!timeline.manual.banner && timeline.data.length != 0) {
+  (!timeline.manual.banner && timeline.data.length !== 0) {
   <app-timeline
     [items]="timeline.data"
     [title]="timeline.header"
     [headerUrl]="timeline.headerUrl"
   />
-  } @if (timeline.manual.banner && timeline.data.length != 0) {
+  } @if (timeline.manual.banner && timeline.data.length !== 0) {
   <app-banner
     [photoUrl]="
       timeline.data[0].photos ? timeline.data[0].photos[0].photoUrlBase : ''
     "
+    [photoAlt]="timeline.data[0].verticalPhotos[0].captionEt"
     [title]="timeline.data[0].heading"
     [description]="timeline.data[0].lead"
   />

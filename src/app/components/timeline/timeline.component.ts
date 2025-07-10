@@ -15,7 +15,7 @@ export class TimelineComponent {
   scrollLimits = signal([0, 0]);
   title = input('Placeholder');
   headerUrl = input('test');
-  items = input<Array<TimelineItem>>([]);
+  items = input<TimelineItem[]>([]);
 
   constructor() {
     setTimeout(() => {
