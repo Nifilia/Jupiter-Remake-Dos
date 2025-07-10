@@ -1,11 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  input,
-  Renderer2,
-  signal,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, input, signal, ViewChild } from '@angular/core';
 import { TimelineItem } from '../../model/content.type';
 
 @Component({
