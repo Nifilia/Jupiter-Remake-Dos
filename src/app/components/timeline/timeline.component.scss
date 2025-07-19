@@ -9,10 +9,12 @@
     border: none;
 
     padding: 0.25em;
+    width: 32px;
+    height: 32px;
 
     z-index: 1;
     position: absolute;
-    bottom: 40%;
+    bottom: 50%;
     font-size: 3em;
 
     &:hover {
@@ -33,7 +35,7 @@
   &__gradient {
     pointer-events: none;
     position: absolute;
-    width: 98%;
+    width: 100%;
     height: 320px;
     background: linear-gradient(
       to left,

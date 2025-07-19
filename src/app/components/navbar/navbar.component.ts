@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
     <nav class="navbar">
       <div class="navbar-group">
         <h3>{{ title }}</h3>
-        <a>TV Shows</a>
-        <a>Films</a>
-        <a>Radio</a>
-        <a>Audio Books</a>
-        <a>Other Media</a>
+        <a>Sarjad</a>
+        <a>Filmid</a>
+        <a>Raadio</a>
+        <a>Audio Raamatud</a>
+        <a>Teised Meediad</a>
       </div>
       <div class="navbar-group">
         <a>Login</a>
-        <a class="subscribe">Subscribe</a>
+        <a class="subscribe">Liitu</a>
       </div>
     </nav>
   `,
